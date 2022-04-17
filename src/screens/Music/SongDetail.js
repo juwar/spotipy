@@ -1,6 +1,6 @@
 import "./SongDetail.css";
 import { connect } from "react-redux";
-import { selectSong } from "../actions";
+import { selectSong } from "../../actions";
 
 const SongDetail = ({
   selectedSongId = -1,

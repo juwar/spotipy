@@ -1,8 +1,8 @@
 import "./Player.css";
 import { useEffect, useRef, useState } from "react";
 import { connect, useDispatch } from "react-redux";
-import { forwardsSvg, backwardsSvg, shuffleSvg } from "../svg";
-import { setPlayerState, selectSongById } from "../actions";
+import { forwardsSvg, backwardsSvg, shuffleSvg } from "../../svg";
+import { setPlayerState, selectSongById } from "../../actions";
 import Progress from "./ProgressBar";
 import SongTime from "./SongTime";
 

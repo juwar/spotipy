@@ -17,6 +17,35 @@
   padding: 20px;
   font-size: 2rem;
   font-weight: 400;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.app-text {
+  margin: 0px 0px;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  flex: 2;
+  font-style: italic;
+}
+
+.app-login {
+  flex-direction: row;
+  margin: 0px 0px;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  flex: 0.1;
+}
+.app-trial {
+  flex-direction: row;
+  margin: 0px 0px;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  flex: 0.1;
+  text-decoration: none !important;
 }
 
 i.fa-spotify {

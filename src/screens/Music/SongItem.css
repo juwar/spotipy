@@ -3,7 +3,7 @@
     width: 98%;
     height: fit-content;
     display: grid;
-    grid-template-columns: 10% 50% 30% 10%;
+    grid-template-columns: 10% 40% 30% 10% 10%;
     padding: 10px 5px;
     transition: all 0.1s ease-in-out;
 }
@@ -34,6 +34,10 @@
 
 .song-item > .name {
     justify-content: flex-start !important;
+}
+
+.song-item > .price {
+    color: orange;
 }
 
 .item-control > svg,
