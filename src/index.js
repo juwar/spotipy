@@ -5,6 +5,7 @@ import App from "./screens/App";
 import reducers from "./reducers";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const rooty = () => {
   return (

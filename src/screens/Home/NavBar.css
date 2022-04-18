@@ -31,7 +31,6 @@
 }
 
 .app-login {
-  flex-direction: row;
   margin: 0px 0px;
   padding: 20px;
   font-size: 1.5rem;
@@ -39,7 +38,6 @@
   flex: 0.1;
 }
 .app-trial {
-  flex-direction: row;
   margin: 0px 0px;
   padding: 20px;
   font-size: 1.5rem;

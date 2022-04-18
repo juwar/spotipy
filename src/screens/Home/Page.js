@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Page.css";
-import metadata from "../../data/metadata.json";
+import { Modal, Button, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const { handleClose, show } = props;
+  const navigate = useNavigate();
   return (
     <div className="page">
       <div className="left-side">
         <div className="title">Sample Sound</div>
-        <div className="card">
-          <div className="card-image">
+        <div className="co-card">
+          <div className="co-card-image">
             <img
               className="img-container"
               src="https://i.scdn.co/image/ab67616d0000b273d53ff239ccefe81d5d8b2cee"
@@ -20,7 +23,7 @@ const NavBar = () => {
               alt=""
             />
           </div>
-          <div className="card-image">
+          <div className="co-card-image">
             <img
               className="img-container"
               src="https://i.scdn.co/image/ab67616d0000b273d53ff239ccefe81d5d8b2cee"
@@ -32,7 +35,7 @@ const NavBar = () => {
               alt=""
             />
           </div>
-          <div className="card-image">
+          <div className="co-card-image">
             <img
               className="img-container"
               src="https://i.scdn.co/image/ab67616d0000b273d53ff239ccefe81d5d8b2cee"
@@ -57,53 +60,55 @@ const NavBar = () => {
       </div>
       <div className="right-side">
         <div className="title-right">Harga Layanan</div>
-        <div className="card">
-          <div className="card-price">
-            <div className="card-price-title">Pribadi</div>
-            <div className="card-price-desc">Anda dapat mendownload lagu</div>
-            <div className="card-price-price">0 koin / bulan</div>
-            <div className="card-price-detail">
+        <div className="co-card">
+          <div className="co-card-price">
+            <div className="co-card-price-title">Pribadi</div>
+            <div className="co-card-price-desc">
+              Anda dapat mendownload lagu
+            </div>
+            <div className="co-card-price-price">0 koin / bulan</div>
+            <div className="co-card-price-detail">
               <a href="#">Selengkapnya</a>
             </div>
           </div>
-          <div className="card-price">
-            <div className="card-price-title">Komersial</div>
-            <div className="card-price-desc">
+          <div className="co-card-price">
+            <div className="co-card-price-title">Komersial</div>
+            <div className="co-card-price-desc">
               Anda dapat request lagu anda dan mendownload lagu
             </div>
-            <div className="card-price-price">500 koin / bulan</div>
-            <div className="card-price-detail">
+            <div className="co-card-price-price">500 koin / bulan</div>
+            <div className="co-card-price-detail">
               <a href="#">Selengkapnya</a>
             </div>
           </div>
-          <div className="card-price">
-            <div className="card-price-title">Perusahaan</div>
-            <div className="card-price-desc">
+          <div className="co-card-price">
+            <div className="co-card-price-title">Perusahaan</div>
+            <div className="co-card-price-desc">
               Anda dapat request lagu anda atau mendownload lagu dengan lisensi
             </div>
-            <div className="card-price-price">2000 koin</div>
-            <div className="card-price-detail">
+            <div className="co-card-price-price">2000 koin</div>
+            <div className="co-card-price-detail">
               <a href="#">Selengkapnya</a>
             </div>
           </div>
         </div>
         <div className="title-right">Harga Koin</div>
-        <div className="card">
-          <div className="card-price">
-            <div className="card-price-price">Rp. 10.000,00/90 koin</div>
-            <div className="card-price-detail">
+        <div className="co-card">
+          <div className="co-card-price">
+            <div className="co-card-price-price">Rp. 10.000,00/90 koin</div>
+            <div className="co-card-price-detail">
               <a href="#">Selengkapnya</a>
             </div>
           </div>
-          <div className="card-price">
-            <div className="card-price-price">Rp. 20.000,00/200 koin</div>
-            <div className="card-price-detail">
+          <div className="co-card-price">
+            <div className="co-card-price-price">Rp. 20.000,00/200 koin</div>
+            <div className="co-card-price-detail">
               <a href="#">Selengkapnya</a>
             </div>
           </div>
-          <div className="card-price">
-            <div className="card-price-price">Rp. 45.000,00/500 koin</div>
-            <div className="card-price-detail">
+          <div className="co-card-price">
+            <div className="co-card-price-price">Rp. 45.000,00/500 koin</div>
+            <div className="co-card-price-detail">
               <a href="#">Selengkapnya</a>
             </div>
           </div>
@@ -116,6 +121,34 @@ const NavBar = () => {
           Dapatkan instrumen musuik tradisional hanya di Traditional Music
           Indonesia
         </div>
+      </div>
+      <div>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicUsername">
+                <Form.Label>Username</Form.Label>
+                <Form.Control type="text" placeholder="Enter username" />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={()=> navigate('/music')}>
+              Submit
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </div>
   );
