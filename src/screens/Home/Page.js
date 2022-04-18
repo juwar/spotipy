@@ -26,7 +26,7 @@ const NavBar = (props) => {
           <div className="co-card-image">
             <img
               className="img-container"
-              src="https://i.scdn.co/image/ab67616d0000b273d53ff239ccefe81d5d8b2cee"
+              src="https://i.scdn.co/image/ab67616d0000b27355fbe24143cbc9fecd22165f"
               alt=""
             />
             <img
@@ -38,7 +38,7 @@ const NavBar = (props) => {
           <div className="co-card-image">
             <img
               className="img-container"
-              src="https://i.scdn.co/image/ab67616d0000b273d53ff239ccefe81d5d8b2cee"
+              src="https://mmc.tirto.id/image/2017/09/13/black-brothers-02--IST.jpg"
               alt=""
             />
             <img

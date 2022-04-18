@@ -20,7 +20,7 @@ a {
   grid-column: 1/13;
   background-image: url("../../img/bg_50.png");
   background-repeat: no-repeat;
-  /* background-size: 100% auto; */
+  background-size: 100% auto;
   margin: auto;
   overflow: auto;
   padding: 1.2rem;
