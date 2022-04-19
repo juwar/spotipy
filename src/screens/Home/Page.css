@@ -197,3 +197,8 @@ a {
   margin: 1rem 3rem;
   text-align: center;
 }
+
+.my-modal .modal-content {
+  background-color: rgb(15, 23, 42);
+  color: white;
+}
